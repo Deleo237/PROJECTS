@@ -1,0 +1,271 @@
+body {
+    margin: 0px;
+    height: 100%;
+}
+
+.yesno,
+.inputing {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+#delete-update {
+    padding: 7% 10%;
+}
+
+.p {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.yesno select {
+    width: 40%;
+}
+
+.inputing input {
+    width: 40%;
+    height: 32px;
+    text-align: center;
+    margin: 0px;
+}
+
+#purple-section {
+    background-color: #a82222;
+    height: 100vh;
+    background-image: url('../CodexJobWin-main/pngegg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+h1 {
+    color: #fff;
+}
+
+.purple-class {
+    flex-direction: column;
+}
+
+.purple-content {
+    margin-top: 15px;
+}
+
+.sign-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-up-image {
+    height: 350px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#white-section {
+    margin: 0px;
+    position: relative;
+    height: 100vh;
+}
+
+.white-form-content {
+    flex-direction: column;
+    max-width: 330px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.next-button {
+    background-image: linear-gradient(to right, #fa05bd, #a82222);
+    border-radius: 14px;
+    width: 90px;
+    height: 30px;
+    text-align: center;
+    border: none;
+    color: #fff;
+    font-weight: bolder;
+}
+
+.back-button {
+    background-image: none;
+    border-radius: 14px;
+    width: 90px;
+    height: 30px;
+    text-align: center;
+    border: none;
+    font-weight: bolder;
+}
+
+.row {
+    margin: 0px;
+}
+
+@media screen and (max-width: 1000px) {
+    #purple-section {
+        display: none;
+    }
+}
+
+article {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cl1-article {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.cl3-article {
+    display: flex;
+    flex-direction: column;
+}
+
+.article3 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 3px;
+}
+
+.name input {
+    width: 100%;
+}
+
+.name-password {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 3px;
+    position: relative;
+}
+
+.name-password input {
+    width: 100%;
+}
+
+.name1 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 3px;
+}
+
+.name1 input {
+    width: 100%;
+}
+
+label {
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+.control {
+    display: flex;
+    height: 40px;
+    border-radius: 20px;
+    background-color: white;
+    border: 1px solid #ced4da;
+}
+
+select {
+    display: flex;
+    height: 32px;
+    border-radius: 20px;
+    background-color: white;
+    border: 1px solid #ced4da;
+}
+
+.name1 ::placeholder {
+    text-align: center;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 200px;
+    font-size: 22px;
+    letter-spacing: 7px;
+    color: rgba(159, 160, 155, 0.75);
+}
+
+.name ::placeholder {
+    text-align: center;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 100px;
+    font-size: 20px;
+    color: rgba(159, 160, 155, 0.75);
+}
+
+.white-header {
+    margin-top: 15px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: flex-end;
+}
+
+.white-header a {
+    text-decoration: none;
+}
+
+.purple-section-footer {
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+}
+
+.first-section-content {
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-second-section a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bolder;
+}
+
+.article-paragraph {
+    align-items: center;
+    text-align: center;
+    font-weight: 50px;
+}
+
+.fa-eye {
+    position: absolute;
+    top: 60%;
+    right: 4%;
+    cursor: pointer;
+    color: #a82222;
+}
+
+.fa-eye2 {
+    top: 65%;
+}

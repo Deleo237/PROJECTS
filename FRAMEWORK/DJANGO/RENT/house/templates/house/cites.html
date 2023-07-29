@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/92025e0c7f.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://kit.fontawesome.com/92025e0c7f.css"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Asap Renting</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+      integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="{% static 'css/asap-stylesheet1.css' %}" />
+    <style>
+      #purple-sectioon {
+        background-image: url("{% static 'images/home/Sky_and_River_relax_desktop_backgrounds_Desktop_Wallpaper.jpg'%}");
+      }
+    </style>
+  </head>
+  <body>
+    <section id="title">
+      <div class="container-fluid position-absolute">
+        <nav
+          class="navbar navbar-expand-lg navbar-dark"
+          style="background-color: #cb1c24"
+        >
+          <a class="navbar-brand" href="#">ASAP RENTING</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Signin</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Login</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="{% url 'addcite' %}">Add Cite</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Help</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <div class="subtitle">
+          <div class="subtitle-content">
+            <div
+              class="room-overlay position-relative buttom-0 top-0 left-0 right-0 opacity-50 bg-dark"
+            >
+              <div class="subtitle-text">
+                <div class="subtitle-h1">
+                  <h1 style="color: #fff">Rent as soon as possible</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {% comment %}
+    <section id="slogant">
+      <div class="slogant-class">
+        <h1 class="d-flex justify-center">
+          You are just a click away to finding your dream room or cite
+        </h1>
+      </div>
+    </section>
+    {% endcomment %}
+
+    <section id="search">
+      <div class="search-class">
+        <div class="search-class-item">
+          <form action="article">
+            <div class="search-input">
+              <select class="form-select" name="room type" id="room-type">
+                <option value="" disabled selected hidden>
+                  Room, Studio, Appartment,...?
+                </option>
+                <option value="1">room</option>
+                <option value="2">studio</option>
+                <option value="3">Apartment</option>
+                <option value="4">Guess House</option>
+              </select>
+            </div>
+            <div class="search-input">
+              <select class="form-select" name="room type" id="room-type">
+                <option value="" disabled selected hidden>
+                  City,Quarter,...?
+                </option>
+                <option value="1">malingo</option>
+                <option value="2">moliko</option>
+                <option value="3">mayor street</option>
+                <option value="4">bomaka</option>
+              </select>
+            </div>
+            <div class="search-button d-flex justify-content-center">
+              <button type="button" class="btn btn-dark btn-lg">Search</button>
+            </div>
+            <a
+              href="{% url 'addcite' %}"
+              class="search-ads d-flex justify-content-center"
+              style="color: #fff"
+              >Advertise my property</a
+            >
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="room">
+      <div class="room-class">
+        <div class="room-content">
+          <div class="row">
+            {% for cite in cites %}
+            <a href="{% url 'singlecite' cite.cite_id %}">
+              <div class="col col-lg-4 shadow-lg p-3 mb-5 bg-body rounded">
+                {% if cite.cite_image %}
+                <div class="room-img">
+                  <img
+                    style="width: 100%; height: 100%"
+                    class="imgrm"
+                    src="{{ cite.cite_image.url }}"
+                    alt="sing-up"
+                  />
+                </div>
+                {% endif %}
+                <div class="imgstm">
+                  <div class="type1"><p>Type</p></div>
+                  <div class="type1nm"><p>{{ cite.cite_type }}</p></div>
+                </div>
+                <div class="imgstm">
+                  <div class="type2"><p>Location</p></div>
+                  <div class="type2nm"><p>{{ cite.address }}</p></div>
+                </div>
+                <div class="imgstm">
+                  <div class="type3"><p>Price</p></div>
+                  <div class="type3nm"><p>{{cite.price }}</p></div>
+                </div>
+              </div>
+            </a>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="footer">
+      <div class="footer-class">
+        <div class="footer-content">
+          <p style="color: #fff">Copyright</p>
+          <!-- <img src="../asap-renting/images/copyright.jpg" alt="copyright" class="copyright-image"> -->
+          <p style="color: #fff">&amp 2023. All right reserved</p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
